@@ -226,25 +226,6 @@ end
 --- Earlier lithium-sulfur batteries
 --
 
-if settings.startup["senomorerocketman-earlier-lithium-sulfur-battery"] then
-   data.raw.technology["kr-lithium-sulfur-battery"].prerequisites = {
-	  "production-science-pack",
-	  "kr-lithium-processing",
-   }
-   data.raw.technology["kr-lithium-sulfur-battery"].unit = {
-	  count = 200,
-	  ingredients = {
-		 {"automation-science-pack", 1},
-		 {"logistic-science-pack", 1},
-		 {"chemical-science-pack", 1},
-		 {"se-rocket-science-pack", 1},
-		 {"space-science-pack", 1},
-		 {"production-science-pack", 1},
-	  },
-	  time = 30,
-   }
-end
-
 --
 --- Earlier space railways
 --
@@ -252,7 +233,7 @@ end
 if settings.startup["senomorerocketman-earlier-space-railway"] then
    -- Remove holmium cable tech prereq to space railways
    data.raw.technology["se-space-rail"].prerequisites = {
-	  "kr-lithium-sulfur-battery",
+	  "se-holmium-cable",
    }
    -- Remove energy science packs from space railway tech
    data.raw.technology["se-space-rail"].unit = {
